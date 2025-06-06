@@ -16,6 +16,8 @@ async function showFullScreenText({ text, typingSpeed, textSize, boldText }) {
     }
     if (boldText) {
         fullScreenTextEl.classList.add('heading');
+    } else {
+        fullScreenTextEl.classList.add('subheading');
     }
 
     fullScreenTextContainerEl.appendChild(fullScreenTextEl);
