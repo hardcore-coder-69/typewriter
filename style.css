@@ -1,0 +1,36 @@
+body {
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    overflow: hidden;
+    /* font-family: "Roboto", sans-serif; */
+    font-family: "Cookie", cursive;
+    /* font-family: "Pacifico", cursive; */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.full-screen-text-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 120px);
+    width: calc(100vw - 210px);
+
+    display: none;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 105px;
+    padding-right: 105px;
+}
+
+.heading {
+    font-weight: bold;
+    margin-top: 20px;
+}
