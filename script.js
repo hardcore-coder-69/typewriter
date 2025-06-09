@@ -1,9 +1,15 @@
 const keyboardTypingSoundEl = document.getElementById("keyboard-typing-audio");
+const bgmSoundEl = document.getElementById("bgm-audio");
 const fullScreenTextContainerEl = document.getElementById('full-screen-text-container');
 
 keyboardTypingSoundEl.load();
 keyboardTypingSoundEl.loop = true;
 keyboardTypingSoundEl.volume = 1;
+keyboardTypingSoundEl.playbackRate = 2;
+
+bgmSoundEl.load();
+bgmSoundEl.loop = true;
+bgmSoundEl.volume = 0.5;
 
 
 // Show full screen text
@@ -93,102 +99,73 @@ async function start() {
     keyboardTypingSoundEl.pause();
     await sleep(1000);
     console.log("Starting animation...");
-
-    // await showFullScreenText({
-    //     text: 'You don’t need more time, you need more focus.',
-    //     typingSpeed: 100,
-    //     textSize: '42px',
-    //     boldText: true
-    // });
-
-    // await showFullScreenText({
-    //     text: 'Most people aren’t short on hours, they’re short on priorities. Attention is the new currency.',
-    //     typingSpeed: 100,
-    //     textSize: '38px',
-    //     boldText: false
-    // });
-
-    // await showFullScreenText({
-    //     text: 'Discipline is doing it even when no one’s watching.',
-    //     typingSpeed: 100,
-    //     textSize: '42px',
-    //     boldText: true
-    // });
-
-    // await showFullScreenText({
-    //     text: 'Motivation fades. What stays is your ability to show up anyway.',
-    //     typingSpeed: 100,
-    //     textSize: '38px',
-    //     boldText: false
-    // });
-
-    // await showFullScreenText({
-    //     text: 'If you can’t be consistent, don’t expect results.',
-    //     typingSpeed: 100,
-    //     textSize: '42px',
-    //     boldText: true
-    // });
-
-    // await showFullScreenText({
-    //     text: 'Success doesn’t come from intensity. It comes from showing up again and again.',
-    //     typingSpeed: 100,
-    //     textSize: '38px',
-    //     boldText: false
-    // });
-
+    bgmSoundEl.play();
 
     await showFullScreenText({
-        text: "Why You Shouldn't Multitask",
+        text: 'Push yourself because no one else is going to do it for you.',
         typingSpeed: 100,
         textSize: '42px',
         boldText: true
     });
 
     await showFullScreenText({
-        text: `You think you're saving time by multitasking — replying to emails, switching tabs, checking messages.
-But your brain doesn't actually do tasks at the same time. It switches focus — and that switch costs time.`,
+        text: '— Unknown',
         typingSpeed: 100,
         textSize: '38px',
         boldText: false
     });
 
     await showFullScreenText({
-        text: `🕑 According to neuroscience, every switch wastes about 23 minutes to fully regain focus.`,
-        typingSpeed: 100,
-        textSize: '38px',
-        boldText: false
-    });
-
-    await showFullScreenText({
-        text: `🧪 Multitasking lowers your IQ temporarily more than smoking marijuana does.`,
-        typingSpeed: 100,
-        textSize: '38px',
-        boldText: false
-    });
-
-    await showFullScreenText({
-        text: `📉 It kills productivity, increases mistakes, and even shrinks your brain’s gray matter.`,
-        typingSpeed: 100,
-        textSize: '38px',
-        boldText: false
-    });
-
-    await showFullScreenText({
-        text: "Real productivity?",
+        text: 'Don’t watch the clock; do what it does. Keep going.',
         typingSpeed: 100,
         textSize: '42px',
         boldText: true
     });
 
     await showFullScreenText({
-        text: `Do one thing at a time, with full attention.`,
+        text: '— Sam Levenson',
         typingSpeed: 100,
         textSize: '38px',
         boldText: false
     });
 
     await showFullScreenText({
-        text: `It's faster, smarter, and way less stressful.`,
+        text: 'Hard times create strong men. Strong men create good times.',
+        typingSpeed: 100,
+        textSize: '42px',
+        boldText: true
+    });
+
+    await showFullScreenText({
+        text: '— G. Michael Hopf',
+        typingSpeed: 100,
+        textSize: '38px',
+        boldText: false
+    });
+
+    await showFullScreenText({
+        text: 'Start where you are. Use what you have. Do what you can.',
+        typingSpeed: 100,
+        textSize: '42px',
+        boldText: true
+    });
+
+    await showFullScreenText({
+        text: '— Arthur Ashe',
+        typingSpeed: 100,
+        textSize: '38px',
+        boldText: false
+    });
+
+    await showFullScreenText({
+        text: 'Work hard in silence. Let success make the noise.',
+        typingSpeed: 100,
+        textSize: '42px',
+        boldText: true
+    });
+
+    await showFullScreenText({
+        text: '— Frank Ocean',
         typingSpeed: 100,
         textSize: '38px',
         boldText: false
