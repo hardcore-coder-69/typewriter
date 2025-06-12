@@ -115,6 +115,8 @@ async function start() {
         boldText: false
     });
 
+    await sleep(1000);
+
     await showFullScreenText({
         text: 'Don’t watch the clock; do what it does. Keep going.',
         typingSpeed: 100,
@@ -128,6 +130,8 @@ async function start() {
         textSize: '38px',
         boldText: false
     });
+
+    await sleep(1000);
 
     await showFullScreenText({
         text: 'Hard times create strong men. Strong men create good times.',
@@ -143,6 +147,8 @@ async function start() {
         boldText: false
     });
 
+    await sleep(1000);
+
     await showFullScreenText({
         text: 'Start where you are. Use what you have. Do what you can.',
         typingSpeed: 100,
@@ -156,6 +162,8 @@ async function start() {
         textSize: '38px',
         boldText: false
     });
+
+    await sleep(1000);
 
     await showFullScreenText({
         text: 'Work hard in silence. Let success make the noise.',
