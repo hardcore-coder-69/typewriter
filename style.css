@@ -21,18 +21,33 @@ body {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 120px);
-    width: calc(100vw - 210px);
+    width: calc(100vw - 110px);
 
     display: none;
-    padding-top: 60px;
+    padding-top: 0px;
     padding-bottom: 60px;
-    padding-left: 105px;
-    padding-right: 105px;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+.mini-image {
+    animation: showSmoothly 0.5s;
+}
+
+@keyframes showSmoothly {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .heading {
     font-weight: bold;
     margin-top: 20px;
+    /* color: red; */
 }
 
 .subheading {

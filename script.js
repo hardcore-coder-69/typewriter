@@ -12,6 +12,22 @@ bgmSoundEl.loop = true;
 bgmSoundEl.volume = 0.5;
 
 
+async function scrollToTop(px) {
+    fullScreenTextContainerEl.style.transition = 'transform 1s linear';
+    fullScreenTextContainerEl.style.transform = `translateY(-${px}px)`;
+}
+
+
+async function addImage({ src, style }) {
+    const imageEl = document.createElement('img');
+    imageEl.classList.add('mini-image');
+    imageEl.setAttribute('src', src);
+    imageEl.setAttribute('style', style);
+
+    fullScreenTextContainerEl.appendChild(imageEl);
+}
+
+
 // Show full screen text
 async function showFullScreenText({ text, typingSpeed, textSize, boldText }) {
     fullScreenTextContainerEl.style.display = 'flex';
@@ -91,7 +107,14 @@ async function typeWriter({ textEl, text, typingSpeed }) {
 
 
 
-document.addEventListener('click', start);
+document.addEventListener('click', startHandler);
+let started = false;
+function startHandler() {
+    if (started) return;
+    started = true;
+    start();
+}
+
 async function start() {
     console.log("Testing sound...");
     keyboardTypingSoundEl.play();
@@ -102,14 +125,32 @@ async function start() {
     bgmSoundEl.play();
 
     await showFullScreenText({
-        text: 'Push yourself because no one else is going to do it for you.',
+        text: '🔬 Scientific Basis for Time Travel',
+        typingSpeed: 100,
+        textSize: '48px',
+        boldText: true
+    });
+
+    await sleep(2000);
+
+    await showFullScreenText({
+        text: `Time Dilation (Einstein's Theory of Relativity)`,
         typingSpeed: 100,
         textSize: '42px',
         boldText: true
     });
 
+    await sleep(2000);
+
+    await addImage({
+        src: './assets/lightspeed.jpg',
+        style: 'width: 200px; margin-top: 20px; margin-bottom: 20px;'
+    });
+
+    await sleep(2000);
+
     await showFullScreenText({
-        text: '— Unknown',
+        text: 'According to Special Relativity, time moves slower for objects moving close to the speed of light. This is called time dilation.',
         typingSpeed: 100,
         textSize: '38px',
         boldText: false
@@ -118,14 +159,7 @@ async function start() {
     await sleep(1000);
 
     await showFullScreenText({
-        text: 'Don’t watch the clock; do what it does. Keep going.',
-        typingSpeed: 100,
-        textSize: '42px',
-        boldText: true
-    });
-
-    await showFullScreenText({
-        text: '— Sam Levenson',
+        text: `If you travel in a spaceship at near light speed and return to Earth, less time will have passed for you than for those who stayed on Earth. `,
         typingSpeed: 100,
         textSize: '38px',
         boldText: false
@@ -134,14 +168,36 @@ async function start() {
     await sleep(1000);
 
     await showFullScreenText({
-        text: 'Hard times create strong men. Strong men create good times.',
+        text: `This is forward time travel, and it’s proven and experimentally observed (e.g., with GPS satellites).`,
+        typingSpeed: 100,
+        textSize: '38px',
+        boldText: false
+    });
+
+    await sleep(2000);
+
+    await scrollToTop(455);
+
+    await sleep(2000);
+
+    await showFullScreenText({
+        text: `General Relativity and Gravitational Time Dilation`,
         typingSpeed: 100,
         textSize: '42px',
         boldText: true
     });
 
+    await sleep(2000);
+
+    await addImage({
+        src: './assets/blackhole.png',
+        style: 'width: 400px; margin-top: 20px; margin-bottom: 20px;'
+    });
+
+    await sleep(2000);
+
     await showFullScreenText({
-        text: '— G. Michael Hopf',
+        text: 'In General Relativity, time moves slower in stronger gravitational fields.',
         typingSpeed: 100,
         textSize: '38px',
         boldText: false
@@ -150,14 +206,36 @@ async function start() {
     await sleep(1000);
 
     await showFullScreenText({
-        text: 'Start where you are. Use what you have. Do what you can.',
+        text: 'Near a black hole, time passes much slower compared to Earth. This was popularized in the movie Interstellar.',
+        typingSpeed: 100,
+        textSize: '38px',
+        boldText: false
+    });
+
+    await sleep(2000);
+
+    await scrollToTop(900);
+
+    await sleep(2000);
+
+    await showFullScreenText({
+        text: 'Wormholes',
         typingSpeed: 100,
         textSize: '42px',
         boldText: true
     });
 
+    await sleep(2000);
+
+    await addImage({
+        src: './assets/wormhole.png',
+        style: 'width: 400px; margin-top: 20px; margin-bottom: 20px;'
+    });
+
+    await sleep(2000);
+
     await showFullScreenText({
-        text: '— Arthur Ashe',
+        text: `A wormhole is a hypothetical tunnel through spacetime connecting two distant points.`,
         typingSpeed: 100,
         textSize: '38px',
         boldText: false
@@ -166,14 +244,16 @@ async function start() {
     await sleep(1000);
 
     await showFullScreenText({
-        text: 'Work hard in silence. Let success make the noise.',
+        text: `If one end is accelerated and brought back, time might flow differently at each end, theoretically allowing travel between times.`,
         typingSpeed: 100,
-        textSize: '42px',
-        boldText: true
+        textSize: '38px',
+        boldText: false
     });
 
+    await sleep(1000);
+
     await showFullScreenText({
-        text: '— Frank Ocean',
+        text: `However, wormholes are purely theoretical and unstable (may require “exotic matter” to keep open).`,
         typingSpeed: 100,
         textSize: '38px',
         boldText: false
